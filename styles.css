@@ -108,14 +108,34 @@ html {
   color: #000;
 }
 
-/* things i need to work on
-1. buttons are not the same size
-2. in the input, search placeholder is too far left
-3. Add an image logo instead of just the text
-4. theres too much space between the elements in the header and the end of it,
-compared it to the actual site and see. Need to somehow get rid of that open space
-5. need to add hover and blur effect to the h1, one of them is an a tag and the other is
-the logo. need to figure out how to do that because each have different
-hover animations
-6. need to add an ease in transition to the signin button when it turns
-*/
+/* HERO */
+
+.hero__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #dadbf1;
+  padding: 80px 20px; /* 80px top & bottom 20px left & right */
+}
+
+.hero__title {
+  font-size: 80px;
+  font-weight: normal;
+}
+
+.hero__search {
+  background-image: url('./images/icons8-right-arrow-24.png');
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  width: 50%;
+  max-width: 720px;
+  height: 50px;
+  border-radius: 10px;
+  padding-left: 12px; /* Indent placeholder text */
+  transition: border-color 0.2s ease;
+}
+
+.hero__search:hover {
+  border-color: #4c5fd5;
+}
