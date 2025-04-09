@@ -13,44 +13,99 @@ html {
   justify-content: space-between;
   align-items: center;
   background-color: #000000;
+  padding: 1rem 0; /* Increased vertical padding */
 }
 
-.header__title {
+.header__links {
+  display: flex;
+  align-items: center;
+  margin-left: 10%;
+  gap: 0.1rem; /* Increased spacing */
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
   color: #fff;
-  font-size: 1.5rem;
-  margin-left: 15%;
+  transition: opacity 0.2s ease; /* Changed to opacity */
+  font-size: 16px; /* Set explicit font size */
 }
 
-.header__elements {
+.header__logo:hover {
+  opacity: 0.8;
+}
+
+.header__separator {
+  color: #fff;
+  margin: 0 4px; /* Added small margin */
+}
+
+.header__logo-img {
+  width: 1.6rem;
+  padding-right: 0.2rem;
+}
+
+.header__helpcenter {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px; /* Set explicit font size */
+}
+
+.header__helpcenter:hover {
+  text-decoration: underline;
+}
+
+.header__actions {
   display: flex;
   align-items: center;
   gap: 1rem;
-  margin-right: 15%;
+  margin-right: 10%;
 }
 
-.header__input {
-  height: 2rem;
-  border-radius: 0.5rem;
+/* Shared styles for header interactive elements */
+.header__search,
+.header__submit-btn,
+.header__signin-btn {
+  height: 40px; /* Consistent height */
+  border-radius: 8px;
+  font-size: 14px;
+  padding: 0 16px;
+  font-weight: 500;
 }
 
-.submit__button {
+.header__search {
+  min-width: 200px;
+  padding-left: 12px; /* Indent placeholder text */
+  border: none; /* Remove default border */
+  outline: none; /* Remove focus outline */
+}
+
+.header__submit-btn {
   color: #fff;
-  background-color: #000000;
+  background-color: transparent;
   border: 1px solid #fff;
-  height: 2rem;
-  border-radius: 0.5rem;
+  padding: 0 20px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
 }
 
-.signin__button {
+.header__submit-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Subtle hover effect */
+}
+
+.header__signin-btn {
   color: #fff;
   background-color: #4c5fd5;
-  height: 2rem;
-  border-radius: 0.5rem;
+  border: none;
+  padding: 0 20px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-.signin__button:hover {
+.header__signin-btn:hover {
   background-color: #fff;
-  color: #000; /* makes text black color when hovered so you can see it */
+  color: #000;
 }
 
 /* things i need to work on
@@ -62,4 +117,5 @@ compared it to the actual site and see. Need to somehow get rid of that open spa
 5. need to add hover and blur effect to the h1, one of them is an a tag and the other is
 the logo. need to figure out how to do that because each have different
 hover animations
+6. need to add an ease in transition to the signin button when it turns
 */
