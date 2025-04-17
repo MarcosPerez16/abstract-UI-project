@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+/* still needs mobile responsiveness */
+
 /* General */
 body,
 html {
   margin: 0;
   padding: 0;
   font-family: 'Inter', sans-serif;
+  height: 100%;
 }
 
 .header__container {
@@ -142,6 +145,10 @@ html {
 
 /* MAIN */
 
+.features p {
+  color: #000;
+}
+
 .features {
   display: flex;
   justify-content: center;
@@ -169,4 +176,88 @@ html {
 
 .feature:hover {
   background-color: #dadbf1;
+}
+
+/* FOOTER */
+
+.footer {
+  background-color: #000;
+
+  padding: 5rem 10%;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+.footer__columns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-grow: 1;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.footer__title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 4px; /* gets rid of the excess space between the title and links
+  most likely do to default styles
+  */
+}
+
+.footer__link {
+  font-size: 16px;
+}
+
+.footer a,
+p,
+h3,
+h5,
+strong {
+  text-decoration: none;
+  color: #fff;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* instead of grabbing each section one by one
+so: .abstract__info, .resources, and so on,
+below we just user the footer tag and then the section and it only grabs those
+in the footer, much cleaner way to write it since they are all doing the 
+same thing
+*/
+.footer section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer__logo {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+}
+
+.copyright p {
+  margin: 0;
+}
+
+.copyright {
+  margin-top: auto;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 16px;
 }
